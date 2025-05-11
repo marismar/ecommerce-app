@@ -46,10 +46,10 @@ export const products: Product[] = [
     createdAt: '2025-04-28T02:26:03.604Z',
     sellerName: 'Alexandra Schulist',
     image: 'https://i.postimg.cc/RZs3nPmh/macbook-air.png',
-    name: 'Licensed Bamboo Towels',
+    name: 'Macbook Air 13.3"',
     price: '865.99',
     originalPrice: '992.75',
-    favorite: false,
+    favorite: true,
     id: '5',
   },
   {

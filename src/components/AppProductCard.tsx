@@ -1,3 +1,4 @@
+import { Heart } from 'lucide-react-native';
 import React from 'react';
 import { Image, StyleSheet, View } from 'react-native';
 import { Product } from '../data/products';
@@ -27,6 +28,15 @@ const AppProductCard = ({ item }: AppProductCardProps) => {
           $ {item.originalPrice}
         </AppText>
       </View>
+
+      <View style={styles.favoriteButton}>
+        <Heart
+          size={20}
+          strokeWidth={1}
+          stroke={item.favorite ? AppColors.error : AppColors.dark1}
+          fill={item.favorite ? AppColors.error : AppColors.transparent}
+        />
+      </View>
     </View>
   );
 };
@@ -48,5 +58,16 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'flex-end',
     gap: Spacing.xxs,
+  },
+  favoriteButton: {
+    position: 'absolute',
+    alignItems: 'center',
+    justifyContent: 'center',
+    backgroundColor: AppColors.white,
+    borderRadius: BorderRadius.lg,
+    width: 30,
+    height: 30,
+    top: 10,
+    right: 10,
   },
 });
